@@ -6,14 +6,12 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  while valid_move?(board,index) != true
+  input = gets.strip.to_i-1
+  while valid_move?(board,input) != true
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
+  input = gets.strip.to_i-1
   end
-  move(board, index, token='X')
+  move(board, input, token='X')
 end 
 
 
